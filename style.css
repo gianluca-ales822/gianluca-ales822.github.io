@@ -1,0 +1,297 @@
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(to bottom, #f5d9c6, #f9efe8);
+    overflow-x: hidden;
+    background-color: #c05a4d;
+}
+
+/* ================= INTRO BUSTA ================= */
+.intro {
+    position: fixed;
+    inset: 0;
+    background: rgb(238, 199, 199);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 1s ease;
+}
+
+.intro.fade-out {
+    opacity: 0;
+}
+
+.envelope {
+    position: relative;
+    width: 320px;
+    height: 220px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 110px;
+    background: #ececec;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: top;
+    transition: transform 1.2s ease;
+}
+
+.letter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
+    color: #c05a4d;
+    transition: transform 1.2s ease;
+}
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .letter {
+    transform: translateY(-250px);
+}
+
+/* ================= REVEAL EFFECT ================= */
+.contenuto {
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.contenuto.visibile {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ================= PETALI ================= */
+.petalo {
+    position: fixed;
+    top: -50px;
+    width: 15px;
+    height: 20px;
+    /* background: #c05a4d; */
+
+    border-radius: 50% 50% 50% 0;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: caduta linear forwards;
+    z-index: 5000;
+}
+
+@keyframes caduta {
+    0% { transform: translateY(-50px) rotate(0deg); }
+    100% { transform: translateY(110vh) rotate(360deg); }
+}
+
+/* ================= SEZIONI ================= */
+
+.sezione {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* tutte allo stesso livello base */
+}
+
+.prima {
+    position: sticky;   /* rimane in alto durante lo scroll */
+    top: 0;
+    height: 50%;
+    transition: opacity 0.1s linear; /* dissolvenza + scivolo */
+    z-index: 2; /* sopra il resto finché non scivola via */
+}
+
+.seconda {
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* sotto la prima sezione, ma subito cliccabile quando la prima scivola */
+}
+
+/* Reparto colorato nella seconda sezione */
+.reparto {
+    width: 100%;
+    padding: 120px 20px;
+}
+
+.reparto.rosa {
+    background: #f5d9c6;
+    height: 850px;
+}
+
+/* CARD */
+.sfondo {
+    background: white;
+    width: 700px;
+    height: 100%;
+    padding: 50px 40px;
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+h1.titolo_piccolo {
+    font-family: "Tangerine", cursive;
+    color: #c05a4d;
+    font-size: 70px;
+}
+
+h2.titolo_principale {
+    color: #b58900;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+h3.nomi {
+    font-family: 'Great Vibes', cursive;
+    color: #c05a4d;
+    font-size: 60px;
+    margin: 30px 0;
+}
+
+.cuore {
+    width: 350px;
+    height: auto;
+   /* margin: 30px auto; */
+
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.25));
+
+    animation: battito 1s ease-in-out infinite;
+}
+
+@keyframes battito {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.linee {
+    margin: 30px 0;
+    border-top: 1px solid #ddd;
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 28px;
+    color: #b58900;
+}
+
+.date span.giorno {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* ================= BOTTONI ================= */
+.bottone-mappa {
+    display: inline-block;
+    margin: 15px;           /* distanza tra bottoni */
+    padding: 15px 25px;
+    background: #c05a4d;    /* colore rosso invito */
+    color: white;
+    font-family: 'Great Vibes', cursive;
+    font-size: 24px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bottone-mappa:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ================= SEZIONE REGALI ================= */
+.reparto-omaggio {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;  /* distanza tra righe */
+    font-family: 'Playfair Display', serif;
+}
+
+.reparto-omaggio h2 {
+    color: #b58900;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.reparto-omaggio p {
+    font-size: 20px;
+    color: #c05a4d;
+    margin: 0;
+}
+
+.reparto-omaggio h6 {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.foto_loro {
+    width: 550px;
+    max-width: 90%;
+    height: auto;
+
+    border-radius: 20px;
+
+    border: 8px solid white;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.2),
+        0 0 0 3px #e3b04b;
+
+    margin-top: 30px;
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.foto_loro:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.25),
+        0 0 0 3px #e3b04b;
+}
+
+@media (max-width: 768px) {
+    .foto_loro {
+        width: 95%;
+    }
+
+    .cuore {
+        width: 160px;
+    }
+}
+
+/* ================= ALLINEAMENTO CENTRALE ================= */
+.reparto-rosa .bottone-mappa,
+.reparto-rosa .reparto-omaggio {
+    text-align: center;
+}
+
+.info { color: #c05a4d; font-size: 24px; }
+.luogo { font-size: 20px; }
+.footer h4 { font-family: 'Great Vibes', cursive; font-size: 40px; color: #c05a4d; }
