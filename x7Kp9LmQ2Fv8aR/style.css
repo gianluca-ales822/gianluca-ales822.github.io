@@ -4,6 +4,11 @@ body {
     background: linear-gradient(to bottom, #f5d9c6, #f9efe8);
     overflow-x: hidden;
     background-color: #c05a4d;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centra tutto */
+
 }
 
 /* ================= INTRO BUSTA ================= */
@@ -73,6 +78,10 @@ body {
     opacity: 0;
     transform: scale(0.98);
     transition: opacity 1.2s ease, transform 1.2s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contenuto.visibile {
@@ -103,12 +112,12 @@ body {
 /* ================= SEZIONI ================= */
 
 .sezione {
-
+    width: 100%;          /* occupa tutta la larghezza */
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 1; /* tutte allo stesso livello base */
+    z-index: 1;
 }
 
 .prima {
