@@ -126,6 +126,8 @@ body {
     height: 50%;
     transition: opacity 0.1s linear; /* dissolvenza + scivolo */
     z-index: 2; /* sopra il resto finché non scivola via */
+    display: flex;
+    justify-content: center;
 }
 
 .seconda {
@@ -148,13 +150,16 @@ body {
 
 /* CARD */
 .sfondo {
-    background: white;
+    background: #ffffff;
     width: 700px;
+    max-width: 90%;      /* importante per telefono */
     height: 100%;
     padding: 50px 40px;
     border-radius: 40px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     text-align: center;
+
+    margin: 0 auto;      /* CENTRA LA CARD */
 }
 
 h1.titolo_piccolo {
