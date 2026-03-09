@@ -251,6 +251,7 @@ h3.nomi {
     font-size: 20px;
     color: #c05a4d;
     margin: 0;
+    white-space: pre-line;
 }
 
 .reparto-omaggio h6 {
