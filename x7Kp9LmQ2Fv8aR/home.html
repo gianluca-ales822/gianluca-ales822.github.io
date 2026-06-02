@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selezione Lingua</title>
+    <link rel="stylesheet" href="stile_home.css">
+   
+
+    <script>
+        function showNotification(message, type = "info") {
+            const container = document.getElementById("notification-container");
+            const notification = document.createElement("div");
+
+            notification.classList.add("notification", type);
+            notification.textContent = message;
+
+            container.appendChild(notification);
+
+            setTimeout(() => {
+                notification.classList.add("hide");
+
+                notification.addEventListener("animationend", () => {
+                    notification.remove();
+                });
+            }, 3000);
+        }
+
+        function vai_inglese() {
+            showNotification(
+                "Verrai portato alla versione inglese",
+                "eng"
+            );
+
+            setTimeout(() => {
+                window.location.href = "ingl.html";
+            }, 3500);
+        }
+
+        function vai_italiano() {
+            showNotification(
+                "Verrai portato alla versione italiana",
+                "ita"
+            );
+
+            setTimeout(() => {
+                window.location.href = "ita.html";
+            }, 3500);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="language-card">
+            <img src="bandiera_inglese.png" alt="Bandiera Inglese">
+            <button onclick="vai_inglese()">
+                Versione Inglese
+            </button>
+        </div>
+
+        <div class="language-card">
+            <img src="bandiera_italia.png" alt="Bandiera Italiana">
+            <button onclick="vai_italiano()">
+                Versione Italiana
+            </button>
+        </div>
+    </div>
+
+    <div id="notification-container"></div>
+</body>
+</html>
