@@ -301,3 +301,73 @@ h3.nomi {
 .info { color: #c05a4d; font-size: 24px; }
 .luogo { font-size: 20px; }
 .footer h4 { font-family: 'Great Vibes', cursive; font-size: 40px; color: #c05a4d; }
+
+/*================= ALBUM DIGITALE ================= */
+
+.album-digitale{
+    margin-top:40px;
+    padding:35px 25px;
+    background:rgba(255,255,255,.55);
+    border-radius:18px;
+    border:1px solid rgba(180,150,120,.35);
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.album-digitale h2{
+    margin-bottom:18px;
+}
+
+.album-testo{
+    font-size:1.05rem;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+.codice-album{
+    margin-top:10px;
+}
+
+.codice-album span{
+    display:block;
+    font-size:.95rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#8b6d5c;
+}
+
+.codice-album h3{
+    margin-top:8px;
+    font-size:2rem;
+    letter-spacing:3px;
+    color:#8b5e3c;
+    font-family:'Playfair Display', serif;
+}
+
+.store-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin:25px 0;
+}
+
+.bottone-store{
+    display:inline-block;
+    padding:12px 22px;
+    background:#ffffff;
+    color:#c05a4d;
+    border:2px solid #c05a4d;
+    border-radius:30px;
+    text-decoration:none;
+    font-family:'Playfair Display', serif;
+    font-size:18px;
+    font-weight:bold;
+    transition:.25s;
+}
+
+.bottone-store:hover{
+    background:#c05a4d;
+    color:white;
+    transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
+}
