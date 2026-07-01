@@ -29,7 +29,7 @@
         function vai_inglese() {
             showNotification(
                 "Verrai portato alla versione inglese",
-                "eng"
+                "ita"
             );
 
             setTimeout(() => {
@@ -47,6 +47,17 @@
                 window.location.href = "ita.html";
             }, 3500);
         }
+
+        function vai_spagnolo() {
+            showNotification(
+                "Verrai portato alla versione spagnola",
+                "ita"
+            );
+
+            setTimeout(() => {
+                window.location.href = "esp.html";
+            }, 3500);
+        }
     </script>
 </head>
 
@@ -55,7 +66,7 @@
         <div class="language-card">
             <img src="bandiera_inglese.png" alt="Bandiera Inglese">
             <button onclick="vai_inglese()">
-                Versione Inglese
+                Inglish Version
             </button>
         </div>
 
@@ -63,6 +74,12 @@
             <img src="bandiera_italia.png" alt="Bandiera Italiana">
             <button onclick="vai_italiano()">
                 Versione Italiana
+            </button>
+        </div>
+        <div class="language-card">
+            <img src="bandiera_tri.png" alt="Bandiera Ecuador">
+            <button onclick="vai_spagnolo()">
+                Version Castellano
             </button>
         </div>
     </div>
