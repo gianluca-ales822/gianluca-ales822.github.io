@@ -371,3 +371,193 @@ h3.nomi {
     transform:translateY(-3px);
     box-shadow:0 8px 18px rgba(0,0,0,.18);
 }
+
+/* ================= PAGINA RINGRAZIAMENTI ================= */
+
+.pagina-ringraziamenti {
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    background: linear-gradient(
+        to bottom,
+        #f5d9c6,
+        #f9efe8
+    );
+}
+
+/* CARD PRINCIPALE */
+
+.card-ringraziamenti {
+    width: 650px;
+    max-width: 90%;
+
+    padding: 70px 55px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-radius: 40px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* TITOLO */
+
+.card-ringraziamenti h1 {
+    margin: 0;
+
+    font-family: 'Tangerine', cursive;
+    font-size: 90px;
+    font-weight: 700;
+
+    color: #c05a4d;
+}
+
+/* PICCOLO TITOLO */
+
+.card-ringraziamenti h2 {
+    margin: 10px 0 35px;
+
+    font-family: 'Great Vibes', cursive;
+    font-size: 38px;
+    font-weight: 400;
+
+    color: #b58900;
+}
+
+/* LINEA DECORATIVA */
+
+.linea-oro {
+    width: 100px;
+
+    margin: 15px auto;
+
+    border-top: 1px solid #e3b04b;
+}
+
+/* TESTO */
+
+.card-ringraziamenti p {
+    margin: 25px auto;
+
+    max-width: 520px;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    line-height: 1.8;
+
+    color: #5f4a43;
+}
+
+/* FIRMA */
+
+.firma {
+    margin-top: 45px;
+
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+
+    color: #c05a4d;
+}
+
+/* PICCOLA LINEA SOTTO LA FIRMA */
+
+.piccola-linea {
+    width: 60px;
+
+    margin: 20px auto 15px;
+
+    border-top: 1px solid #e3b04b;
+}
+
+/* DATA */
+
+.data-ringraziamenti {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    color: #8b6d5c;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .pagina-ringraziamenti {
+        padding: 25px 15px;
+    }
+
+    .card-ringraziamenti {
+        padding: 50px 25px;
+
+        border-radius: 30px;
+    }
+
+    .card-ringraziamenti h1 {
+        font-size: 75px;
+    }
+
+    .card-ringraziamenti h2 {
+        font-size: 32px;
+    }
+
+    .card-ringraziamenti p {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .firma {
+        font-size: 40px;
+    }
+}
+
+
+/* ================= BOTTONE TORNA ALL'INVITO ================= */
+
+.bottone-torna {
+    display: inline-block;
+
+    margin-top: 35px;
+    padding: 12px 25px;
+
+    background: transparent;
+
+    color: #c05a4d;
+
+    border: 1px solid #c05a4d;
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.bottone-torna:hover {
+    background: #c05a4d;
+    color: white;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
